@@ -10,11 +10,12 @@ int main(){
         numbers.data(),
         numbers.size()
     );
+auto circular_it = circular.begin();
 
     for (int i = 0; i < 7; ++i)
     {
-        std::cout << *circular << " ";
-        ++circular;
+        std::cout << *circular_it << " ";
+        ++circular_it;
     }
 
     // Expected output:
