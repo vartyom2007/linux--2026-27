@@ -1,7 +1,7 @@
 #pragma once
 #include <cstddef>
 
-class ReverceArrayIterator {
+class ReverseArrayIterator {
 private:
 	const int* p_;
 public:
@@ -17,11 +17,12 @@ public:
 };
 class ReverseArrayIteratorBuilder {
 private:
-const int* d_;
-std::size_t s_;
+	const int* d_;
+	std::size_t s_;
 public:
-ReverseArrayIteratorBuilder(const int* d, std::size_t s)
-	: d_(d), s_(s) {}
-ReverseArrayIterator begin() const { return ReverseArrayIterator(d_ + s_ - 1):
-ReverseArrayIterator end() const { return ReverseArrayIterator(d_ - 1);
+	ReverseArrayIteratorBuilder(const int* d, std::size_t s)
+		: d_(d), s_(s) {}
+	ReverseArrayIterator begin() const { return ReverseArrayIterator((s_ == 0 ? d_ : (d_ + s_ - 1));
+}
+	ReverseArrayIterator end() const { return ReverseArrayIterator(d_ - 1);
 };
