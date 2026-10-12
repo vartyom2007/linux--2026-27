@@ -1,7 +1,7 @@
 
 #include <iostream>
 #include <vector>
-#include <Iterator/CircularIntIterator.h>
+#include <CircularIntIterator.h>
 
 int main(){
     std::vector<int> numbers = {10, 20, 30};

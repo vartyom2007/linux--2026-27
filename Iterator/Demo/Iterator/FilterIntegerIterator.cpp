@@ -1,7 +1,7 @@
 
 #include <iostream>
 #include <vector>
-#include <Iterator/FilterIntegerIterator.h>
+#include <FilterIntegerIterator.h>
 
 bool IsEven(int num){
     return num % 2 == 0;
