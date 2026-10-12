@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/vboxuser/linux-2026-27/Iterator/build/cmake_install.cmake",
+		"/home/vboxuser/linux-2026-27/Iterator/build/Demo/Iterator/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
