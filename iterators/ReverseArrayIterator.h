@@ -6,7 +6,7 @@ private:
 	const int* p_;
 public:
 	ReverseArrayIterator(const int* p) : p_(p) {}
-	int operator*() const { return *p_; }
+	int operator*() const { return *(p_ -1); }
 	ReverseArrayIterator& operator++() {
 	--p_;
 	return *this;
@@ -22,7 +22,7 @@ private:
 public:
 	ReverseArrayIteratorBuilder(const int* d, std::size_t s)
 		: d_(d), s_(s) {}
-	ReverseArrayIterator begin() const { return ReverseArrayIterator((s_ == 0 ? d_ : (d_ + s_ - 1));
+	ReverseArrayIterator begin() const { return ReverseArrayIterator(d + s);
 }
-	ReverseArrayIterator end() const { return ReverseArrayIterator(d_ - 1);
+	ReverseArrayIterator end() const { return ReverseArrayIterator(d);
 };
