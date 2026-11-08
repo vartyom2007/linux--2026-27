@@ -10,3 +10,7 @@ target_include_directories(DirectoryIteratorDemo PRIVATE ${UTILS_DIR})
 
 add_executable(RecursiveDirectoryIteratorDemo RecursiveDirectoryIterator.cpp)
 target_include_directories(RecursiveDirectoryIteratorDemo PRIVATE ${UTILS_DIR}) 
+
+add_executable(rm ${UTILS_DIR}/Utils/FS/rm.cpp)
+add_executable(RemoveDemo Remove.cpp)
+
