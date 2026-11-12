@@ -31,9 +31,20 @@ bool remove_file(const std::string& path, bool recursive) {
         bool success = true;
         struct dirent* entry;
 
-        while ((entry = readdir(dir)) != nullptr) {
-            std::string name = entry->d_name;
+        while (true) {
+            errno = 0;
+	    entry = readdir(dir);
 
+	    if(entry == nullptr){
+	    if(errno != 0){
+	       perror(path.c_str());
+
+ 		closedir(dir);
+ 		return false;
+      	}
+  	break;
+	}
+        std::string name = entry->d_name;		
             if (name == "." || name == "..")
                 continue;
 
