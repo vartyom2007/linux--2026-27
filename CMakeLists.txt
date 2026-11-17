@@ -39,3 +39,6 @@ target_link_libraries(HackerRmDemo PRIVATE
 	ArgumentParserLib
 )
 
+add_executable(SerializationDemo Demo/IO/Serialization.cpp)
+
+target_include_directories(SerializationDemo PRIVATE ${CMAKE_SOURCE_DIR})
