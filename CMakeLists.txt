@@ -39,3 +39,13 @@ target_link_libraries(HackerRmDemo PRIVATE
 	ArgumentParserLib
 )
 
+add_library(ProcessLib
+	Utils/Process/Execution.cpp
+)
+target_include_directories(ProcessLib PUBLIC
+	.
+) 
+add_executable(ExecutionDemo
+	Demo/Process/Execution.cpp)
+target_link_libraries(ExecutionDemo PRIVATE
+		ProcessLib)
