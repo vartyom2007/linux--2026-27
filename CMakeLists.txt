@@ -39,3 +39,8 @@ target_link_libraries(HackerRmDemo PRIVATE
 	ArgumentParserLib
 )
 
+
+add_executable(xargs
+	Demo/Process/Xargs/main.cpp
+)
+
